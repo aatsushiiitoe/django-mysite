@@ -10,3 +10,11 @@ class WorkerListView(TemplateView):
     def get(self, request, *args, **kwargs):
         context = super(WorkerListView, self).get_context_data(**kwargs)
         return render(self.request, self.template_name, context)
+
+    def get(self, request, *args, **kwargs):
+        context = super(WorkerListView, self).get_context_data(**kwargs)
+
+        workers = Worker.objects.all()  # データベースからオブジェクトを取得して
+        context['workers'] = workers  # 入れ物に入れる
+
+        return render(self.request, self.template_name, context)
