@@ -21,6 +21,7 @@
                 {% csrf_token %}
                 <div class="text">
                         {{ form.message }}
+                        {{ form.link }}
                 </div>
 
                 <!-- ToDo追加ボタン -->
@@ -39,6 +40,7 @@
                         <tr>
                             <td>
                                 <div class="message">{{ post.message }}</div>
+                                <a href={{post.link}}>{{post.link}}</a>
                                 <div>{{ post.created_date }}</div>
                             </td>
                             <td>

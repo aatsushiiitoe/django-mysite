@@ -5,6 +5,11 @@ class Post(models.Model):
         max_length=100,
         verbose_name="タスク",
     )
+    link = models.CharField(
+        max_length=100,
+        verbose_name="リンク",
+    )
+    
     created_date = models.DateTimeField(
         auto_now_add=True,
         verbose_name="登録日時",
