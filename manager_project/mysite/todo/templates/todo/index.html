@@ -40,8 +40,7 @@
                         <tr>
                             <td>
                                 <div class="message">{{ post.message }}</div>
-                                <a href={{post.link}}>{{post.link}}</a>
-                                <div>{{ post.created_date }}</div>
+                                <a href={{post.link}}>{{ post.message }}</a>
                             </td>
                             <td>
                                 <form action="{% url 'delete' post.id %}" method="post">
