@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.contrib import admin
+from .models import Po, Category, Tag
 
 from .models import Post,Todo,Detail,Choice, Question
 
@@ -44,3 +46,16 @@ class QuestionAdmin(admin.ModelAdmin):
 
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(Choice)
+
+
+
+
+
+class PoAdmin(admin.ModelAdmin):
+    list_display = ['title', 'created_time', 'modified_time', 'category', 'author']
+
+
+admin.site.register(Po, PoAdmin)
+admin.site.register(Category)
+admin.site.register(Tag)
+
