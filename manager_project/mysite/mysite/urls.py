@@ -22,6 +22,7 @@ urlpatterns = [
     path('todo/', include('todo.urls')),
     path('blog/', include('todo.urls')),
     path('upimage/', include('upimage.urls')),
+    path('worktime', include('worktime.urls')),
 ]
 
 # 以下を定義
